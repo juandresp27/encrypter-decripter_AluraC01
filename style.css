@@ -157,4 +157,35 @@ body{
     color: #0A3871;
 }
 
+#out-notfound{
+    width: 90%;
+    height: 50%;
+    align-items: center;
+    margin: 50% 4.5%;    
+}
+
+#out-notfound img{
+    width: 80%;
+}
+
+.message{
+    width: 80%;
+    padding: 10%;
+}
+
+.message h3{
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #343A40;
+}
+
+.message p{
+    padding: 4% 0 0 0;
+    font-size: 0.8em;
+    color: #495057;
+}
+
+
+
+
 

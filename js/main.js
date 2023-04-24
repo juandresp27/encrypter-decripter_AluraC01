@@ -26,8 +26,17 @@ const encryptFunc = ()=>{
             sentence = sentence + input.value[i];
         } 
     }
+    
+    if(sentence!=""){
+        mostrar("out-copy");
+        ocultar("out-notfound");
+    }else{
+        ocultar("out-copy")
+        mostrar("out-notfound");
+    }
+    
     document.getElementById("output").innerHTML = sentence;
-    mostrar("out-copy")
+    
 }
 
 const decryptFunc = ()=>{
@@ -50,8 +59,16 @@ const decryptFunc = ()=>{
             sentence = "";
         }
     }
+    
+    if(textInput!=""){
+        mostrar("out-copy");
+        ocultar("out-notfound");
+    }else{
+        ocultar("out-copy")
+        mostrar("out-notfound");
+    }
+
     document.getElementById("output").innerHTML = textInput;
-    mostrar("out-copy")
 }
 
 const copyFunction = ()=> {
@@ -65,9 +82,6 @@ const copyFunction = ()=> {
      // Copy the text inside the text field
     navigator.clipboard.writeText(copyText.value);
 }
-
-
-
 
 var encrypterButton = document.querySelector("#encrypter");
 encrypterButton.onclick = encryptFunc; 
