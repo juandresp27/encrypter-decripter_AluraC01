@@ -1,3 +1,13 @@
+function ocultar(ID){
+    document.getElementById(ID).style.display = 'none';
+}
+
+function mostrar(ID){
+    document.getElementById(ID).style.display = 'block';
+}
+
+
+
 const encryptFunc = ()=>{
     const vowels= ["a","e","i","o","u"];
     const encryptedValues=["ai","enter","imes","ober","ufat"];
@@ -17,6 +27,7 @@ const encryptFunc = ()=>{
         } 
     }
     document.getElementById("output").innerHTML = sentence;
+    mostrar("out-copy")
 }
 
 const decryptFunc = ()=>{
@@ -40,13 +51,32 @@ const decryptFunc = ()=>{
         }
     }
     document.getElementById("output").innerHTML = textInput;
+    mostrar("out-copy")
 }
+
+const copyFunction = ()=> {
+    // Get the text field
+    var copyText = document.getElementById("output");
+  
+    // Select the text field
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); // For mobile devices
+  
+     // Copy the text inside the text field
+    navigator.clipboard.writeText(copyText.value);
+}
+
+
+
+
 var encrypterButton = document.querySelector("#encrypter");
 encrypterButton.onclick = encryptFunc; 
 
 var decryptorButton = document.querySelector("#decryptor");
 decryptorButton.onclick = decryptFunc; 
     
-    
+var copyButton = document.querySelector("#copy");
+copyButton.onclick = copyFunction; 
+
 
     
