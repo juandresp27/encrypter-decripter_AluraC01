@@ -1,0 +1,137 @@
+body{
+    font-family: 'Inter', sans-serif;
+    background-color: #E5E5E5;
+    height:100vh;
+}
+
+.float-container {
+    height:96.5%;
+    min-height: 96.5vh;
+}
+
+.principal-area{
+    width: 68%;
+    height: 90%;
+    float: left;
+    padding: 1%;
+    margin: 1%;
+}  
+
+.principal-area img{
+    width: 70px;
+}
+
+.input-area{
+    height: 80%;
+    margin: 2%;
+    padding: 0 8%;
+}
+
+#textInput{
+    width: 85%;
+    height: 80%;
+    resize: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    border: none;
+    outline: none;
+    color: #0a3871;
+    font-weight: bold;
+    background-color: #E5E5E5;
+    /*padding-top: 20%;
+    padding-bottom: 60%;*/
+    margin: 5% 5% 5% 5%;
+}
+
+#textInput::placeholder{
+    color: #0a3871;
+}
+
+.bottom-input{
+    height: 15%;
+    padding: 0 10%;
+}
+
+.no-minusculas{
+    font-size:  0.6em;
+    font-weight: bold;
+}
+
+.button-area{
+    width: 100%;
+    margin: 2% 0;
+    text-align: center;
+}
+
+.button {
+    width: 40%;
+    height: 3.8em;
+    font-size: 0.7em;
+    /*padding: 1.1em 5em;*/
+    box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+    border-radius: 15px;
+    transition : 188ms;
+    /*display: flex;
+    flex-direction: row;*/
+    align-items: center;
+    cursor: pointer;
+}
+
+#encrypter{
+    background-color:#0a3871;
+    color:#D8DFE8;
+    border: solid #0a3871 1px;
+    
+}
+
+#encrypter:hover {
+	background-color:#0e4d99;;
+    color: white;
+}
+
+#decryptor{
+    margin-left: 2%;
+    color: #0A3871;
+    background-color: white;
+    border: solid #0a3871 1px;
+}
+
+#decryptor:hover {
+	background-color:#D8DFE8;
+    color: #0A3871;
+}
+
+.outputArea{
+    width: 21.5%;
+    height: 98%;
+    float: left;
+    /*padding: 2%;*/
+    background-color: white;
+    border-radius: 25px;
+    margin: 1% 0 1% 3%;
+    text-align: center;
+}  
+
+#output {
+    color: #495057;
+    padding: 5%;
+    text-align:left;
+    width: 90%;
+    height: 80%;
+}
+
+#copy{
+    width: 70%;
+    margin: 2%;
+    color: #0A3871;
+    background-color: white;
+    border: solid #0a3871 1px;
+}
+
+#copy:hover{
+    background-color:#D8DFE8;
+    color: #0A3871;
+}
+
+
+
