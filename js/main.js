@@ -3,10 +3,8 @@ function ocultar(ID){
 }
 
 function mostrar(ID){
-    document.getElementById(ID).style.display = 'block';
+    document.getElementById(ID).style.display = 'flex';
 }
-
-
 
 const encryptFunc = ()=>{
     const vowels= ["a","e","i","o","u"];

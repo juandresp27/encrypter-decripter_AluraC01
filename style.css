@@ -1,11 +1,11 @@
 body{
     font-family: 'Inter', sans-serif;
     background-color: white;
-    height:100vh;
+    /*height:100vh;*/
 }
 
 .float-container {
-    height:96.5%;
+    height:96.5vh;
     min-height: 96.5vh;
 }
 
@@ -22,14 +22,15 @@ body{
 }
 
 .input-area{
-    height: 80%;
-    margin: 2%;
-    padding: 0 8%;
+    height: 97%;
+    padding: 0% 8%;
+    display: flex;
+    flex-direction: column;
 }
 
 #textInput{
     width: 85%;
-    height: 80%;
+    height: 85%;
     resize: none;
     font-family: 'Inter', sans-serif;
     font-size: 24px;
@@ -38,8 +39,6 @@ body{
     color: #0a3871;
     font-weight: bold;
     background-color: white;
-    /*padding-top: 20%;
-    padding-bottom: 60%;*/
     margin: 5% 5% 5% 5%;
 }
 
@@ -48,35 +47,51 @@ body{
 }
 
 .bottom-input{
+    width: 100%;
     height: 15%;
-    padding: 0 0;
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 0 10%;
 }
 
-.bottom-input p{
-    padding: 0 0 0 9%;
-}
-
-.no-minusculas{
-    font-size:  0.6em;
+.warning{
+    width: 70%;
+    display: flex;
     font-weight: bold;
+    align-items: center;
+    margin-bottom: 1%;
+    transition: 100ms;
+}
+
+.warning p{
+    display: inline;
+    padding: 0 0 0 1%;
+    color: #495057;
+    font-size: 0.75em;
+}
+
+.warning p:hover{
+    cursor: default;
+    color: #30373d;
+}
+
+.warning img{
+    width: 16px;
 }
 
 .button-area{
+    display: flex;
     width: 100%;
-    margin: 2% 0;
-    text-align: center;
+    height: 100%;
 }
 
 .button {
-    width: 40%;
-    height: 3.8em;
+    width: 38%;
+    height: 100%;
     font-size: 0.7em;
-    /*padding: 1.1em 5em;*/
     box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
-    border-radius: 15px;
+    border-radius: 20px;
     transition : 188ms;
-    /*display: flex;
-    flex-direction: row;*/
     align-items: center;
     cursor: pointer;
 }
@@ -106,24 +121,26 @@ body{
 }
 
 .outputArea{
+    display: flex;
     width: 21.5%;
     height: 98%;
     float: left;
-    /*padding: 2%;*/
     background-color: white;
     border-radius: 25px;
-    margin: 1% 0 1% 3%;
+    margin: 1% 3% 1% 3%;
     text-align: center;
-
-    box-shadow: 0px 4px 19px -3px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 0px 4px 19px -3px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 4px 19px -3px rgba(0,0,0,0.75);
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
 }  
 
 #out-copy{
     width: 100%;
     height: 100%;
     display: none;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    text-align: center;
 }
 
 #output {
@@ -131,7 +148,7 @@ body{
     padding: 5%;
     text-align:left;
     width: 80%;
-    height: 80%;
+    height: 75%;
     resize: none;
     font-family: 'Inter', sans-serif;
     font-size: 1em;
@@ -139,14 +156,13 @@ body{
     outline: none;
     color: #495057;
     font-weight: bold;
-    /*padding-top: 20%;
-    padding-bottom: 60%;*/
     margin: 5% 5% 5% 5%;
 }
 
 #copy{
-    width: 70%;
-    margin: 2%;
+    width: 90%;
+    height: 8%;
+    margin: 5%;
     color: #0A3871;
     background-color: white;
     border: solid #0a3871 1px;
@@ -158,14 +174,19 @@ body{
 }
 
 #out-notfound{
-    width: 90%;
-    height: 50%;
+    width: 100%;
+    height: auto;
     align-items: center;
-    margin: 50% 4.5%;    
+    /*margin: 50% 4.5%;    */
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
 }
 
 #out-notfound img{
     width: 80%;
+    height: auto;
 }
 
 .message{
@@ -188,4 +209,155 @@ body{
 
 
 
+@media screen and (max-width:912px){
+    .float-container{
+        height: auto;
+        min-height: auto;
+        width: 99.8%;
+        max-width: 99.8%;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        align-items: center;
+    }
 
+    .principal-area{
+        width: 100%;
+        height: 75vh;
+        display: flex;
+        flex-direction: column;
+        padding: 7% 0 0 0;
+        margin: 0;
+
+    }
+
+    .principal-area img{
+        width: 120px;
+    }
+
+    .input-area{
+        padding: 0 3%;
+    }
+
+    #textInput {
+        margin: 13% 0 5% 0;
+        width: 100%;
+        font-size: 2.2em;
+    }
+
+    .warning img{
+        width: 16px;
+    }
+
+    .outputArea{
+        width: 87%;
+        height: fit-content;
+        align-items: center;
+        text-align: center;
+        margin-top: 8%;
+    }
+
+
+    #out-notfound img{
+        display: none;
+    }
+
+    .button-area{
+        height: 70%;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .bottom-input{
+        padding: 0;
+    }
+
+    .button{
+        width: 60%;
+        font-size: 1.2em;
+        margin: 3%;
+    }
+
+
+    .message{
+        width: 100%;
+        text-align: center;
+        padding: 3%;
+    }
+
+    .message h3{
+        font-size: 1.5em;
+        color: #343A40;
+        font-weight: bold;
+    }
+    .message p{
+        font-size: 1em;
+        padding: 3% 0 0 0;
+    }
+    
+    #out-copy{
+        width: 100%;
+        height: 30vh;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        text-align: center;
+    }
+
+    #output{
+        width: 85%;
+        height: 58%;
+        margin: 1%;
+        padding: 6% 8% 0 8%;
+        font-size: 1.6em;
+    }
+
+    #copy{
+        font-size: 1.2em;
+        height: 17%;
+        margin: 2% 7%;
+    }
+}
+
+
+@media screen and (max-width:450px){
+    
+    .bottom-input{
+        height: 33%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .button-area{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .button{
+        height: 70%;
+        width: 95%;
+        margin: 3% 0;
+    }
+
+    #decyptor{
+        margin-left: 0;
+    }
+
+    #textInput{
+        height: 50%;
+    }
+
+    .outputArea{
+        margin: 4% 2% 0 2%;
+    }
+    #out-notfound{
+        width: 90%;
+        margin: 8% 13%;
+    }
+    .message{
+        padding: 0;
+    }
+}
