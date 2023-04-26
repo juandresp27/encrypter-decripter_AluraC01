@@ -9,7 +9,7 @@ function mostrar(ID){
 const encryptFunc = ()=>{
     const vowels= ["a","e","i","o","u"];
     const encryptedValues=["ai","enter","imes","ober","ufat"];
-    const input = document.querySelector("#textInput");
+    const input = document.querySelector("#entrada-texto");
     let sentence = ""
 
     for(let i = 0; i < input.value.length; i++){
@@ -26,21 +26,21 @@ const encryptFunc = ()=>{
     }
     
     if(sentence!=""){
-        mostrar("out-copy");
-        ocultar("out-notfound");
+        mostrar("sec-salida-copiar");
+        ocultar("sec-no-encontrado");
     }else{
-        ocultar("out-copy")
-        mostrar("out-notfound");
+        ocultar("sec-salida-copiar")
+        mostrar("sec-no-encontrado");
     }
     
-    document.getElementById("output").innerHTML = sentence;
+    document.getElementById("msj-resultado").innerHTML = sentence;
     
 }
 
 const decryptFunc = ()=>{
     const vowels= ["a","e","i","o","u"];
     const encryptedValues=["ai","enter","imes","ober","ufat"];
-    const input = document.querySelector("#textInput");
+    const input = document.querySelector("#entrada-texto");
     let textInput = input.value;
     let sentence = "";
 
@@ -59,19 +59,19 @@ const decryptFunc = ()=>{
     }
     
     if(textInput!=""){
-        mostrar("out-copy");
-        ocultar("out-notfound");
+        mostrar("sec-salida-copiar");
+        ocultar("sec-no-encontrado");
     }else{
-        ocultar("out-copy")
-        mostrar("out-notfound");
+        ocultar("sec-salida-copiar")
+        mostrar("sec-no-encontrado");
     }
 
-    document.getElementById("output").innerHTML = textInput;
+    document.getElementById("msj-resultado").innerHTML = textInput;
 }
 
 const copyFunction = ()=> {
     // Get the text field
-    var copyText = document.getElementById("output");
+    var copyText = document.getElementById("msj-resultado");
   
     // Select the text field
     copyText.select();
@@ -81,13 +81,13 @@ const copyFunction = ()=> {
     navigator.clipboard.writeText(copyText.value);
 }
 
-var encrypterButton = document.querySelector("#encrypter");
+var encrypterButton = document.querySelector("#boton-encriptar");
 encrypterButton.onclick = encryptFunc; 
 
-var decryptorButton = document.querySelector("#decryptor");
+var decryptorButton = document.querySelector("#boton-desencriptar");
 decryptorButton.onclick = decryptFunc; 
     
-var copyButton = document.querySelector("#copy");
+var copyButton = document.querySelector("#boton-copiar");
 copyButton.onclick = copyFunction; 
 
 

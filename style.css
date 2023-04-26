@@ -1,15 +1,14 @@
 body{
     font-family: 'Inter', sans-serif;
     background-color: white;
-    /*height:100vh;*/
 }
 
-.float-container {
+.contenedor {
     height:96.5vh;
     min-height: 96.5vh;
 }
 
-.principal-area{
+.area-principal{
     width: 68%;
     height: 90%;
     float: left;
@@ -17,18 +16,18 @@ body{
     margin: 1%;
 }  
 
-.principal-area img{
+.area-principal img{
     width: 70px;
 }
 
-.input-area{
+.area-entrada{
     height: 97%;
     padding: 0% 8%;
     display: flex;
     flex-direction: column;
 }
 
-#textInput{
+#entrada-texto{
     width: 85%;
     height: 85%;
     resize: none;
@@ -42,11 +41,11 @@ body{
     margin: 5% 5% 5% 5%;
 }
 
-#textInput::placeholder{
+#entrada-texto::placeholder{
     color: #0a3871;
 }
 
-.bottom-input{
+.area-controles{
     width: 100%;
     height: 15%;
     display: flex;
@@ -54,7 +53,7 @@ body{
     padding: 0 0 0 10%;
 }
 
-.warning{
+.advertencia-mayus{
     width: 70%;
     display: flex;
     font-weight: bold;
@@ -63,23 +62,23 @@ body{
     transition: 100ms;
 }
 
-.warning p{
+.advertencia-mayus p{
     display: inline;
     padding: 0 0 0 1%;
     color: #495057;
     font-size: 0.75em;
 }
 
-.warning p:hover{
+.advertencia-mayus p:hover{
     cursor: default;
     color: #30373d;
 }
 
-.warning img{
+.advertencia-mayus img{
     width: 16px;
 }
 
-.button-area{
+.area-botones{
     display: flex;
     width: 100%;
     height: 100%;
@@ -96,31 +95,31 @@ body{
     cursor: pointer;
 }
 
-#encrypter{
+#boton-encriptar{
     background-color:#0a3871;
     color:#D8DFE8;
     border: solid #0a3871 1px;
     
 }
 
-#encrypter:hover {
+#boton-encriptar:hover {
 	background-color:#0e4d99;;
     color: white;
 }
 
-#decryptor{
+#boton-desencriptar{
     margin-left: 2%;
     color: #0A3871;
     background-color: white;
     border: solid #0a3871 1px;
 }
 
-#decryptor:hover {
+#boton-desencriptar:hover {
 	background-color:#D8DFE8;
     color: #0A3871;
 }
 
-.outputArea{
+.area-salida{
     display: flex;
     width: 21.5%;
     height: 98%;
@@ -133,7 +132,40 @@ body{
     box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
 }  
 
-#out-copy{
+#sec-no-encontrado{
+    width: 100%;
+    height: auto;
+    align-items: center;
+    /*margin: 50% 4.5%;    */
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+}
+
+#sec-no-encontrado img{
+    width: 80%;
+    height: auto;
+}
+
+.msj-no-encontrado{
+    width: 80%;
+    padding: 10%;
+}
+
+.msj-no-encontrado h3{
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #343A40;
+}
+
+.msj-no-encontrado p{
+    padding: 4% 0 0 0;
+    font-size: 0.8em;
+    color: #495057;
+}
+
+#sec-salida-copiar{
     width: 100%;
     height: 100%;
     display: none;
@@ -143,7 +175,7 @@ body{
     text-align: center;
 }
 
-#output {
+#msj-resultado {
     color: #495057;
     padding: 5%;
     text-align:left;
@@ -159,7 +191,7 @@ body{
     margin: 5% 5% 5% 5%;
 }
 
-#copy{
+#boton-copiar{
     width: 90%;
     height: 8%;
     margin: 5%;
@@ -168,49 +200,14 @@ body{
     border: solid #0a3871 1px;
 }
 
-#copy:hover{
+#boton-copiar:hover{
     background-color:#D8DFE8;
     color: #0A3871;
 }
 
-#out-notfound{
-    width: 100%;
-    height: auto;
-    align-items: center;
-    /*margin: 50% 4.5%;    */
-    box-sizing: border-box;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-content: center;
-}
-
-#out-notfound img{
-    width: 80%;
-    height: auto;
-}
-
-.message{
-    width: 80%;
-    padding: 10%;
-}
-
-.message h3{
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #343A40;
-}
-
-.message p{
-    padding: 4% 0 0 0;
-    font-size: 0.8em;
-    color: #495057;
-}
-
-
-
 
 @media screen and (max-width:912px){
-    .float-container{
+    .contenedor{
         height: auto;
         min-height: auto;
         width: 99.8%;
@@ -221,7 +218,7 @@ body{
         align-items: center;
     }
 
-    .principal-area{
+    .area-principal{
         width: 100%;
         height: 75vh;
         display: flex;
@@ -231,25 +228,25 @@ body{
 
     }
 
-    .principal-area img{
+    .area-principal img{
         width: 120px;
     }
 
-    .input-area{
+    .area-entrada{
         padding: 0 3%;
     }
 
-    #textInput {
+    #entrada-texto {
         margin: 13% 0 5% 0;
         width: 100%;
         font-size: 2.2em;
     }
 
-    .warning img{
+    .advertencia-mayus img{
         width: 16px;
     }
 
-    .outputArea{
+    .area-salida{
         width: 87%;
         height: fit-content;
         align-items: center;
@@ -258,18 +255,18 @@ body{
     }
 
 
-    #out-notfound img{
+    #sec-no-encontrado img{
         display: none;
     }
 
-    .button-area{
+    .area-botones{
         height: 70%;
         width: 100%;
         align-items: center;
         text-align: center;
     }
 
-    .bottom-input{
+    .area-controles{
         padding: 0;
     }
 
@@ -280,23 +277,23 @@ body{
     }
 
 
-    .message{
+    .msj-no-encontrado{
         width: 100%;
         text-align: center;
         padding: 3%;
     }
 
-    .message h3{
+    .msj-no-encontrado h3{
         font-size: 1.5em;
         color: #343A40;
         font-weight: bold;
     }
-    .message p{
+    .msj-no-encontrado p{
         font-size: 1em;
         padding: 3% 0 0 0;
     }
     
-    #out-copy{
+    #sec-salida-copiar{
         width: 100%;
         height: 30vh;
         flex-direction: column;
@@ -305,7 +302,7 @@ body{
         text-align: center;
     }
 
-    #output{
+    #msj-resultado{
         width: 85%;
         height: 58%;
         margin: 1%;
@@ -313,7 +310,7 @@ body{
         font-size: 1.6em;
     }
 
-    #copy{
+    #boton-copiar{
         font-size: 1.2em;
         height: 17%;
         margin: 2% 7%;
@@ -323,18 +320,17 @@ body{
 
 @media screen and (max-width:450px){
     
-    .bottom-input{
+    .area-controles{
         height: 33%;
         display: flex;
         flex-direction: column;
     }
 
-    .button-area{
+    .area-botones{
         height: 100%;
         display: flex;
         flex-direction: column;
     }
-
 
     .button{
         height: 70%;
@@ -346,18 +342,20 @@ body{
         margin-left: 0;
     }
 
-    #textInput{
+    #entrada-texto{
         height: 50%;
     }
 
-    .outputArea{
+    .area-salida{
         margin: 4% 2% 0 2%;
     }
-    #out-notfound{
+
+    #sec-no-encontrado{
         width: 90%;
         margin: 8% 13%;
     }
-    .message{
+
+    .msj-no-encontrado{
         padding: 0;
     }
 }

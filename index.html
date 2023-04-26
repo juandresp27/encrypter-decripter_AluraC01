@@ -1,5 +1,7 @@
 <!DOCTYPE html>
+
 <html lang="es">
+
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,53 +9,50 @@
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
-    
     </head>
 
     <body>
-        
-        <div class="float-container">
-            <div class="principal-area">
+        <div class="contenedor">
+
+            <div class="area-principal">
                 <header>
                     <img src="./src/alura.svg" alt="Logo alura">
                 </header>
-                
-                <div class="input-area">
-                    <textarea id="textInput" placeholder="Ingrese texto aquí"></textarea>
-                    <div class="bottom-input">
-
-                        <div class="warning">
-                            <img src="src/icon.svg" alt="warning">
+                <div class="area-entrada">
+                    <textarea id="entrada-texto" placeholder="Ingrese texto aquí"></textarea>
+                    <div class="area-controles">
+                        <div class="advertencia-mayus">
+                            <img src="src/icon.svg" alt="advertencia-mayus">
                             <p>Solo letras minúsculas y sin acentos</p>
                         </div>
 
-                        <div class="button-area">
-                            <button id="encrypter" class="button">Encriptar</button>
-                            <button id="decryptor" class="button">Desencriptar</button>
+                        <div class="area-botones">
+                            <button id="boton-encriptar" class="button">Encriptar</button>
+                            <button id="boton-desencriptar" class="button">Desencriptar</button>
                         </div>
-
                     </div>
-                    
                 </div>
             </div>
-            <div class="outputArea">
-                <div id="out-notfound">
+
+            <div class="area-salida">
+                <div id="sec-no-encontrado">
                     <img src="src/notfound.png" alt="no se encuentra texto">
-                    <div class="message">
+                    <div class="msj-no-encontrado">
                         <h3>Ningún mensaje fue encontrado</h3>
                         <p>Ingresa el texto que desees encriptar o desencriptar.</p>
                     </div>
                 </div>
-                <div id="out-copy">
-                    <textarea disabled id="output"></textarea>
-                    <button id="copy" class="button">Copiar</button>
+                <div id="sec-salida-copiar">
+                    <textarea disabled id="msj-resultado"></textarea>
+                    <button id="boton-copiar" class="button">Copiar</button>
                 </div>
-                
             </div>
+
         </div>
-        
-        <script src="js/main.js"></script>
     </body>
+
+    <script src="js/main.js"></script>
+
 </html>
 
 
